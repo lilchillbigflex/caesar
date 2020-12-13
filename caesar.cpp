@@ -16,10 +16,10 @@ int main()
 	do 
 	{
 		cout << "please enter the sentence: ";
-		cin.getline(sentence, size); // ñ÷èòûâàåì ñòðîêó âìåñòå ñ ïðîáåëàìè
+		cin.getline(sentence, size); // считываем строку вместе с пробелами
 		for (int i = 0; i < strlen(sentence); i++)
 		{
-			if (!('A' <= sentence[i] && sentence[i] <= 'Z') && !('a' <= sentence[i] && sentence[i] <= 'z') && sentence[i] != ' ') // ïðîâåðÿåì, âñå ëè ñèìâîëû ïðèíàäëåæàò àíãëèéñêîìó àëôàâèòó (+ ïðîáåë)
+			if (!('A' <= sentence[i] && sentence[i] <= 'Z') && !('a' <= sentence[i] && sentence[i] <= 'z') && sentence[i] != ' ') // проверяем, все ли символы принадлежат английскому алфавиту (+ пробел)
 			{
 				error1 = false;
 				break;
@@ -28,7 +28,7 @@ int main()
 				error1 = true;
 		}
 		if (error1 == false)
-			cout << "error, please use only english letters and 'space' " << endl; // åñëè óñëîâèå íåóäîâëåòâîðåío, âûâîäèì ñîîáùåíèå îá îøèáêå (ñ ïîÿñíåíèåì)
+			cout << "error, please use only english letters and 'space' " << endl; // если условие неудовлетворенo, выводим сообщение об ошибке (с пояснением)
 	} while (error1 == false);
 
 
@@ -38,7 +38,7 @@ int main()
 		cin >> shift;
 		for (int i = 0; i < shift.length(); i++)
 		{
-			if (!( '0' <= shift[i] && shift[i] <= '9')) // ïðîâåðÿåì ââåäåíî ÷èñëî èëè æå ÷òî-òî äðóãîå
+			if (!( '0' <= shift[i] && shift[i] <= '9')) // проверяем введено число или же что-то другое
 			{
 				error2 = false;
 				break;
@@ -48,37 +48,37 @@ int main()
 		}
 		if (error2 == false)
 		{
-			cout << "error, please only use numbers " << endl; // åñëè ââåäåíî ÷òî-òî êðîìå öèôð âûâîäèì ñîîáùåíèå îá îøèáêå (ñ ïîÿñíåíèåì)
+			cout << "error, please only use numbers " << endl; // если введено что-то кроме цифр выводим сообщение об ошибке (с пояснением)
 		}
 	} while (error2 == false);
-	int shift2 = atoi(shift.c_str()); // ïåðåâîäèì ñäâèã â ÷èñëîâóþ ïåðåìåííóþ
+	int shift2 = atoi(shift.c_str()); // переводим сдвиг в числовую переменную
 
 
 	while (shift2 > 26 || shift2 < 0)
 	{
-		cout << "please enter the shift in interval from 0 to 26 (quantity of letters in english alphabet): "; // ïðîñèì ââåñòè ÷èñëî ñäâèãà
+		cout << "please enter the shift in interval from 0 to 26 (quantity of letters in english alphabet): "; // просим ввести число сдвига
 		cin >> shift2;
-		if (shift2 > 26 || shift2 < 0) // ïðîâåðÿåì ââåäåíî ëè ÷èñëî â ïðåäåëàõ ðàçìåðîâ àíãëèéñêîãî àëôàâèòà (26 áóêâ)
-			cout << "error, "; // âûâîäèì ñîîáùåíèå îá îøèáêå (ñðàçó çà íèì âûâåäåòñÿ ñîîáùåíèå, ñ ïðîñüáîé ââåñòè ÷èñëî ñäâèãà, èç íà÷àëà öèêëà) 
+		if (shift2 > 26 || shift2 < 0) // проверяем введено ли число в пределах размеров английского алфавита (26 букв)
+			cout << "error, "; // выводим сообщение об ошибке (сразу за ним выведется сообщение, с просьбой ввести число сдвига, из начала цикла) 
 	}
 
 
-	cout << "coding or decoding? please enter letters 'c' or 'd': "; // ïðîñèì ââåñòè ðåæèì (Êîäèðîâêà èëè äåêîäèðîâêà)
+	cout << "coding or decoding? please enter letters 'c' or 'd': "; // просим ввести режим (Кодировка или декодировка)
 	while (mode != 'c' && mode != 'd') 
 	{
 		cin >> mode;
-		if (mode != 'c' && mode != 'd') //ïðîâåðÿåì ââåäåí ëè îäèí èç íóæíûõ ñèìâîëîâ
-			cout << "error, please enter letters 'c' or 'd': " << endl; // âûâîäèì óâåäîìëåíèå îá îøèáêå (ñ ïîÿñíåíèåì)
+		if (mode != 'c' && mode != 'd') //проверяем введен ли один из нужных символов
+			cout << "error, please enter letters 'c' or 'd': " << endl; // выводим уведомление об ошибке (с пояснением)
 	}
 	if (mode == 'd') 
-		shift2 = 26 - shift2; // ïðè äåêîäèðîâêå íàì íóæíî âåðíóòüñÿ ê èçíà÷àëüíîìó ñèìâîëó, è òàê êàê ìû ïîñëå 26 âîçâðàùàåìñÿ íà èñõîäíóþ ïîçèöèþ, òî ìîæåì èñïîëüçîâàòü òó æå ôîðìóëó, òîëüêî èñïîëüçóÿ ÷èñëî, êîòîðîå âåðíåò íàñ íà èñõîäíóþ ïîçèöèþ (shift + (26 - shift) = 26)
+		shift2 = 26 - shift2; // при декодировке нам нужно вернуться к изначальному символу, и так как мы после 26 возвращаемся на исходную позицию, то можем использовать ту же формулу, только используя число, которое вернет нас на исходную позицию (shift + (26 - shift) = 26)
 
 
 
-	for (int i = 0; sentence[i] != 0; i++) // ðàññ÷èòûâàåì íîìåð ñèìâîëà, êîòîðûé áóäåò ïîñëå êîäèðîâêè/äåêîäèðîâêè       
+	for (int i = 0; sentence[i] != 0; i++) // рассчитываем номер символа, который будет после кодировки/декодировки       
 	{
 		if ('A' <= sentence[i] && sentence[i] <= 'Z')
-			sentence[i] = (sentence[i] - 'A' + shift2) % 26 + 'A'; // âû÷èòàåì èç íîìåðà ñèìâîëà íîìåð À ÷òîáû ïîëó÷èòü ïîðÿäêîâûé íîìåð ñèìâîëà â àëôàâèòå, ïðèáàâëÿåì ê íåìó ÷èñëî ñäâèãà òåì ñàìûì ïîëó÷àåì íîìåð èòîãîâîãî ñèìâîëà, áåðåì îñòàòîê îò äåëåíèÿ íà 26, ÷òîáû åñëè ó íàñ íàïðèìåð íîìåð 29 ýòî ñ÷èòàëîñü êàê íîìåð 3, ïðèáàâëÿåì îáðàòíî íîìåð À ÷òîáû ïîëó÷èòü íîìåð ñèìâîëà â òàáëèöå þíèêîäà
+			sentence[i] = (sentence[i] - 'A' + shift2) % 26 + 'A'; // вычитаем из номера символа номер А чтобы получить порядковый номер символа в алфавите, прибавляем к нему число сдвига тем самым получаем номер итогового символа, берем остаток от деления на 26, чтобы если у нас например номер 29 это считалось как номер 3, прибавляем обратно номер А чтобы получить номер символа в таблице юникода
 		else if ('a' <= sentence[i] && sentence[i] <= 'z')
 			sentence[i] = (sentence[i] - 'a' + shift2) % 26 + 'a';
 		else if (sentence[i] == ' ')
@@ -87,9 +87,9 @@ int main()
 
 
 	if (mode == 'c') 
-		cout << "coded sentence: " << sentence << endl;   // âûâîäèì èòîã êîäèðîâêè
+		cout << "coded sentence: " << sentence << endl;   // выводим итог кодировки
 	else 
-		cout << "decoded sentence: " << sentence << endl; // âûâîäèì èòîã äåêîäèðîâêè
+		cout << "decoded sentence: " << sentence << endl; // выводим итог декодировки
 
 	return 0;
 }
