@@ -8,4 +8,5 @@
 # Пример
 1) С ошибками в каждом пункте. Кодировка
 ![Image alt](https://github.com/lilchillbigflex/caesar/blob/main/example01.png)
-2) 
+2) Без ошибок. Декодировка
+![Image Alt](https://github.com/lilchillbigflex/caesar/blob/main/example02.png)
