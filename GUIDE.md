@@ -10,11 +10,11 @@
 
 ![Image Alt](https://github.com/lilchillbigflex/caesar/blob/main/start.png)
 
-2)Пользователь вводит шаг сдвига
+2) Пользователь вводит шаг сдвига
 
 ![Image Alt](https://github.com/lilchillbigflex/caesar/blob/main/main%20functions%202.png)
 
-3)Пользователь выбирает режим (зашифровка или расшифровка)
+3) Пользователь выбирает режим (зашифровка или расшифровка)
 
 ![Image ALt](https://github.com/lilchillbigflex/caesar/blob/main/main%20functions%203.png)
 # Завершение программы
