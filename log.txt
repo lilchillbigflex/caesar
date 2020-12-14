@@ -1,0 +1,41 @@
+ date 14:12:2020
+time 23:02:16 | entered sentence with wrong symbols 
+time 23:02:39 | entered sentence: OkAY iM oKAY
+time 23:02:45 | entered wrong shift
+time 23:02:52 | entered shift: 23
+time 23:03:13 | entered wrong mode
+time 23:03:13 | entered wrong mode
+time 23:03:26 | entered mode: code
+time 23:03:26 | coded sentence: LhXV fJ lHXV
+time 23:03:26 | end of program 
+ 
+ date 14:12:2020
+time 23:05:01 | entered sentence: LhXV fJ lHXV
+time 23:05:03 | entered shift: 23
+time 23:05:05 | entered mode: decode
+time 23:05:05 | decoded sentence: OkAY iM oKAY
+time 23:05:05 | end of program 
+ 
+ date 14:12:2020
+time 23:05:29 | entered sentence: heLLO worlD i LovE You
+time 23:05:33 | entered shift: 16
+time 23:05:37 | entered wrong mode
+time 23:05:42 | entered mode: code
+time 23:05:42 | coded sentence: xuBBE mehbT y BelU Oek
+time 23:05:42 | end of program 
+ 
+ date 14:12:2020
+time 23:06:22 | entered sentence: xuBBE mehbT y BelU Oek
+time 23:06:37 | entered shift: 16
+time 23:06:38 | entered mode: decode
+time 23:06:38 | decoded sentence: heLLO worlD i LovE You
+time 23:06:38 | end of program 
+ 
+ date 14:12:2020
+time 23:06:47 | entered sentence: lalaLA LA
+time 23:06:49 | entered shift: 12
+time 23:06:50 | entered mode: code
+time 23:06:50 | coded sentence: xmxmXM XM
+time 23:06:50 | end of program 
+ 
+ 
